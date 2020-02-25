@@ -10,8 +10,6 @@ import com.codingwithset.fixaslabtask.repository.DataRepository
 class DataViewModel(
     private var repository: DataRepository) : ViewModel() {
     val allData: LiveData<List<Data>> = repository.getAllData()
-    var rowCount:Int? = 0
-
 
     fun getData(listener: DataListener) {
         listener.onStarted()

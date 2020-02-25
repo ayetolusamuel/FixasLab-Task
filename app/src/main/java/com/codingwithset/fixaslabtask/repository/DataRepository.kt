@@ -13,7 +13,6 @@ class DataRepository(
     private val database: AppDatabase
 ) {
 
-
     suspend fun getData(): Response<List<Data>> {
         return myApi.getDataResponse(50)
     }

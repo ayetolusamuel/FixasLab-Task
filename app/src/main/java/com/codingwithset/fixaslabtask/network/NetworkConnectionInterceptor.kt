@@ -9,6 +9,9 @@ import com.codingwithset.fixaslabtask.utils.Exception
 import okhttp3.Interceptor
 import okhttp3.Response
 
+/*
+network connection handling.
+ */
 class NetworkConnectionInterceptor(
     context: Context
 ): Interceptor {

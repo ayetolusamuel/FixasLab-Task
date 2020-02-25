@@ -7,10 +7,11 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.codingwithset.fixaslabtask.model.Data
 
-
+/*
+handle action on data for cache<room>
+ */
 @Dao
 interface DataDao {
-
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun upSert(data: List<Data>)

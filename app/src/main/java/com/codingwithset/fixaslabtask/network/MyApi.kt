@@ -7,7 +7,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-
+/*
+handle rest-api
+link: https://api.coinmarketcap.com/v1/ticker/?limit=50
+ */
 interface MyApi{
 
     @GET("ticker/")
