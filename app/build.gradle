@@ -35,6 +35,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:2.0'
 
 
     //Kodein Dependency Injection
@@ -66,5 +67,8 @@ dependencies {
 
     //material design
     implementation 'com.google.android.material:material:1.0.0'
+
+    //stetho dependencies
+    implementation 'com.facebook.stetho:stetho:1.5.0'
 
 }

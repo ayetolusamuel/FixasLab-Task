@@ -55,7 +55,8 @@ class HorizontalDottedProgress : View {
     private fun createDot(
         canvas: Canvas,
         paint: Paint
-    ) { //here i have setted progress bar with 10 dots , so repeat and wnen i = mDotPosition  then increase the radius of dot i.e mBounceDotRadius
+    ) {
+        //here i have setted progress bar with 10 dots , so repeat and wnen i = mDotPosition  then increase the radius of dot i.e mBounceDotRadius
         for (i in 0 until mDotAmount) {
             if (i == mDotPosition) {
                 canvas.drawCircle(

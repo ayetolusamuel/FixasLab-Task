@@ -1,11 +1,13 @@
-package com.codingwithset.fixaslabtask
+package com.codingwithset.fixaslabtask.coroutine
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/*
+handle background task
+ */
 object Coroutines{
-
 
     fun main(work: suspend (() -> Unit)) =
         CoroutineScope(Dispatchers.Main).launch {

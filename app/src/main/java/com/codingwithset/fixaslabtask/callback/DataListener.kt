@@ -1,4 +1,6 @@
-package com.codingwithset.fixaslabtask
+package com.codingwithset.fixaslabtask.callback
+
+import com.codingwithset.fixaslabtask.model.Data
 
 
 interface DataListener {

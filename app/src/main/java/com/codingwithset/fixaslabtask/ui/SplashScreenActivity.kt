@@ -1,9 +1,10 @@
-package com.codingwithset.fixaslabtask
+package com.codingwithset.fixaslabtask.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.codingwithset.fixaslabtask.R
 
 class SplashScreenActivity() : AppCompatActivity() {
 
@@ -18,7 +19,10 @@ class SplashScreenActivity() : AppCompatActivity() {
         super.onStart()
         Handler().postDelayed({
             startActivity(Intent(applicationContext, MainActivity::class.java))
-            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left)
+            overridePendingTransition(
+                R.anim.left_to_right,
+                R.anim.right_to_left
+            )
             finish()
         }, 1000)
     }

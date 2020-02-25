@@ -1,17 +1,19 @@
-package com.codingwithset.fixaslabtask
+package com.codingwithset.fixaslabtask.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.codingwithset.fixaslabtask.DataAdapter.DealAdapterViewHolder
+import com.codingwithset.fixaslabtask.R
+import com.codingwithset.fixaslabtask.adapter.DataAdapter.DealAdapterViewHolder
+import com.codingwithset.fixaslabtask.model.Data
+import kotlinx.android.synthetic.main.data_items.view.*
 
 class DataAdapter(
     private val mContext: Context,
-    productList: List<Data>
-) : RecyclerView.Adapter<DealAdapterViewHolder>() {
     private val mProductList: List<Data>
+) : RecyclerView.Adapter<DealAdapterViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,6 +24,11 @@ class DataAdapter(
     }
 
     override fun onBindViewHolder(holder: DealAdapterViewHolder, position: Int) {
+        holder.name.text = mProductList[position].name
+        holder.priceUsd.text = mProductList[position].price_usd
+        holder.percentageChange.text = mProductList[position].percent_change_1h
+        holder.symbol.text = mProductList[position].symbol
+
 
     }
 
@@ -31,11 +38,13 @@ class DataAdapter(
 
     inner class DealAdapterViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
+        val name = itemView.name!!
+        val priceUsd = itemView.price_usd!!
+        val percentageChange = itemView.percent_change_1h!!
+        val symbol = itemView.symbol!!
 
 
     }
 
-    init {
-        mProductList = productList
-    }
+
 }
