@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FixasLab Task</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="please_check_internet_connection">Please check internet connection</string>
+    <string name="unfortunately_there_was_no_internet_access">Unfortunately there was no internet access</string>
+    <string name="error_message">error_message</string>
 </resources>

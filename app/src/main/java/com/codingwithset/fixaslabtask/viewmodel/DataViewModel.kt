@@ -12,15 +12,20 @@ class DataViewModel(
     val allData: LiveData<List<Data>> = repository.getAllData()
 
     fun getData(listener: DataListener) {
-        listener.onStarted()
-        Coroutines.main {
-            val response = repository.getData()
-            if (response.isSuccessful) {
-                listener.onSuccess(response.body()!!)
-            } else {
-                listener.onFailed(response.errorBody().toString())
-            }
-        }
+        repository.fetchData(listener)
+//        listener.onStarted()
+//        Coroutines.main {
+//            val response = repository.getData()
+//            println("res $response")
+//            if (response.isSuccessful) {
+//                println("Succes    $response")
+//
+//                listener.onSuccess(response.body()!!)
+//            } else {
+//                println("failed")
+//                listener.onFailed(response.errorBody().toString())
+//            }
+//        }
 
     }
 

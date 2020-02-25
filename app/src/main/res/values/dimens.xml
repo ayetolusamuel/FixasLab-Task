@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_bottom_loading">16dp</dimen>
+    <dimen name="margin_dim">16dp</dimen>
+    <dimen name="padding_dim">8dp</dimen>
+    <dimen name="view_dim">1dp</dimen>
 </resources>
