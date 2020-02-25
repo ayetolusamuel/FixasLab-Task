@@ -27,7 +27,6 @@ class DataViewModel(
     }
 
     fun insertData(data:List<Data>){
-      repository.getDataCount()
        repository.insertDataList(data)
     }
 

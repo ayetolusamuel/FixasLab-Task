@@ -28,15 +28,5 @@ class DataRepository(
         return database.getDataDao().getAllData()
     }
 
-    fun getDataCount(){
-        Coroutines.io {
-           database.getDataDao().getDataCount()
-
-
-        }
-
-    }
-
-
 
 }

@@ -18,6 +18,4 @@ interface DataDao {
     @Query("SELECT * from data")
     fun getAllData(): LiveData<List<Data>>
 
-    @Query("SELECT count(*) FROM data")
-    fun getDataCount():Long
 }

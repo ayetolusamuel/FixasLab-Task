@@ -12,7 +12,7 @@ import com.codingwithset.fixaslabtask.model.Data
 
 @Database(
     entities = [Data::class],
-    version = 4,
+    version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -39,7 +39,7 @@ abstract class AppDatabase : RoomDatabase() {
                 context.applicationContext,
                 AppDatabase::class.java,
                 "data.db"
-            ).fallbackToDestructiveMigration()
+            )
                 .build()
 
 

@@ -27,12 +27,7 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { DataRepository(instance(), instance()) }
-        bind() from provider {
-            DataViewModelFactory(
-                instance()
-            )
-        }
-
+        bind() from provider { DataViewModelFactory(instance())}
     }
 
 
