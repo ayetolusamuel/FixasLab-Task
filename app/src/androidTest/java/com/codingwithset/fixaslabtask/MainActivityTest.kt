@@ -14,20 +14,14 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class MainActivityTest{
+class MainActivityTest {
+
     @get: Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
-
-
     @Test
-    fun test_ifDataVisible_onAppLaunch() {
-
-        onView(ViewMatchers.withId(R.id.parent_layout)).check(matches(isDisplayed()))
+    fun recyclerviewVisible() {
+        onView(ViewMatchers.withId(R.id.recyclerview)).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun checkElementAtSpecifiedPosition() {
-
-    }
 }
