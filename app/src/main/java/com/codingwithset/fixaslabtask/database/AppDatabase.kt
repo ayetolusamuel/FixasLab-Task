@@ -12,7 +12,7 @@ import com.codingwithset.fixaslabtask.model.Data
 
 @Database(
     entities = [Data::class],
-    version = 1,
+    version = 4,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

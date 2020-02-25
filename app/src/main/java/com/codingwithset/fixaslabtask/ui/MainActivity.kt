@@ -11,6 +11,7 @@ import com.codingwithset.fixaslabtask.R
 import com.codingwithset.fixaslabtask.adapter.DataAdapter
 import com.codingwithset.fixaslabtask.callback.DataListener
 import com.codingwithset.fixaslabtask.model.Data
+import com.codingwithset.fixaslabtask.repository.DataRepository
 import com.codingwithset.fixaslabtask.viewmodel.DataViewModelFactory
 import com.codingwithset.fixaslabtask.utils.toast
 import com.codingwithset.fixaslabtask.viewmodel.DataViewModel
@@ -18,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
+import java.lang.NullPointerException
 
 
 class MainActivity : AppCompatActivity(), KodeinAware {
@@ -59,11 +61,12 @@ class MainActivity : AppCompatActivity(), KodeinAware {
             }
 
             override fun onSuccess(response: List<Data>) {
-                println("success")
-                if (allData!!.isNotEmpty())
-                    return
-                viewModel.insertData(response)
-                initView(response)
+
+               if (allData?.size == null){
+                   initView(response)
+                   viewModel.insertData(response)
+
+               }
             }
 
             override fun onFailed(errorBody: String) {

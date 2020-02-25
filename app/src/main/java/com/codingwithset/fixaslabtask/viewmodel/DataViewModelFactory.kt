@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.codingwithset.fixaslabtask.repository.DataRepository
 
 
+@Suppress("UNCHECKED_CAST")
 class DataViewModelFactory(
     private val repository: DataRepository
 ) : ViewModelProvider.Factory{
